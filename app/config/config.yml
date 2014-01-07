@@ -3,7 +3,6 @@ imports:
     - { resource: security.yml }
     - { resource: bundles/fos_user.yml}
     - { resource: bundles/knp_menu.yml}
-    - { resource: bundles/knp_paginator.yml}
     - { resource: bundles/stof_doctrine_extensions.yml}
     - { resource: bundles/jms_translation.yml}
 
@@ -59,9 +58,12 @@ doctrine:
         # path:     "%database_path%"
 
     orm:
-        auto_generate_proxy_classes: "%kernel.debug%"
-        auto_mapping: true
-
+        default_entity_manager: default
+        entity_managers:
+            default:
+                connection: default
+                mappings: 
+                    AdmingeneratorGeneratorBundle: ~
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"

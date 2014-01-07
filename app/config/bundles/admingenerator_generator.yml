@@ -1,0 +1,9 @@
+admingenerator_generator:
+    # choose  and enable at least one
+    use_propel:           true
+    use_doctrine_orm:     true
+    use_doctrine_odm:     false
+
+    # choose and uncomment only one
+#    base_admin_template: AdmingeneratorGeneratorBundle::base_admin.html.twig
+#    base_admin_template: AdmingeneratorGeneratorBundle::base_admin_assetic_less.html.twig

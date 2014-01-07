@@ -22,11 +22,12 @@
 		"sensio/generator-bundle" : "2.3.*",
 		"incenteev/composer-parameter-handler" : "~2.0",
 		
-		"knplabs/knp-paginator-bundle": "2.3.*@dev",
-		"knplabs/knp-menu-bundle": "2.0.*@dev",
+
 		"friendsofsymfony/user-bundle": "2.0.*@dev",
 		"stof/doctrine-extensions-bundle": "1.1.*@dev",
-		"jms/translation-bundle": "1.1.*@dev"
+		"jms/translation-bundle": "1.1.*@dev",
+		 "cedriclombardot/admingenerator-generator-bundle": "2.3.*@dev"
+		 
 	},
 	"scripts" : {
 		"post-install-cmd" : [
@@ -45,7 +46,8 @@
 		]
 	},
 	"config" : {
-		"bin-dir" : "bin"
+		"bin-dir" : "bin",
+		"component-dir": "web/components" 
 	},
 	"minimum-stability" : "alpha",
 	"extra" : {
