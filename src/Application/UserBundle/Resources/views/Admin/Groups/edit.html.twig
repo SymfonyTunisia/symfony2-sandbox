@@ -1,0 +1,10 @@
+{% extends 'ApplicationAdminBundle::layout.html.twig' %}
+
+{% block title 'user.admin.groups.edit.title'|trans %}
+{% block page_title 'user.admin.groups.edit.title'|trans %}
+
+{% block admin_content %}
+    {% embed 'ApplicationUserBundle:Admin/Groups:_form.html.twig' with {
+        'submit': 'user.admin.groups.edit.submit'|trans
+    } %}{% endembed %}
+{% endblock %}

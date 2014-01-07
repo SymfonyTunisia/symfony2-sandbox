@@ -1,0 +1,54 @@
+{% extends 'ApplicationAdminBundle::layout.html.twig' %}
+
+{% block title 'user.admin.groups.list.title'|trans %}
+{% block page_title 'user.admin.groups.list.title'|trans %}
+
+{% block admin_content %}
+
+    <div class="span6 offset3">
+        <div class="text-center">
+            <a class="btn" href="{{ path('application_user_admin_groups_create') }}">{{ 'user.admin.groups.create.title'|trans }}</a>
+        </div>
+
+        <table class="table sortable" data-sort="1" data-perpage="50">
+            <thead>
+            <tr>
+                <th data-filter="ignore" class="tiny">#</th>
+                <th>{{ 'user.admin.groups.list.name'|trans }}</th>
+                <th class="mini">{{ 'user.admin.groups.list.count'|trans }}</th>
+                <th class="mini"></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for group in groups %}
+                <tr>
+                    <td>{{ group.id }}</td>
+                    <td>
+                        {{ group.name }}
+                        {% if group.default %}<span class="label">{{ 'user.admin.groups.list.default'|trans }}</span>{% endif %}
+                    </td>
+                    <td>
+                        {{ group.users.count }}
+                    </td>
+                    <td>
+                        <a href="{{ path('application_user_admin_groups_edit', {'id': group.id}) }}">
+                            <i class="icon-wrench"></i>
+                        </a>
+                        {% if not group.default %}
+                            &nbsp;&nbsp;
+                            <a href="{{ path('application_user_admin_groups_delete', {'id': group.id}) }}">
+                                <i class="icon-trash"></i>
+                            </a>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="pagination pagination-centered"><ul></ul></div>
+    </div>
+
+
+{% endblock %}

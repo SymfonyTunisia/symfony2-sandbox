@@ -1,14 +1,9 @@
-Symfony Standard Edition
-========================
+symfony2-sandbox
+=======================
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony2
-application that you can use as the skeleton for your new applications.
+Welcome to the Symfony2  sandbox 
 
-This document contains information on how to download, install, and start
-using Symfony. For a more detailed explanation, see the [Installation][1]
-chapter of the Symfony Documentation.
-
-1) Installing the Standard Edition
+1) Installing the symfony2 sandbox
 ----------------------------------
 
 When it comes to installing the Symfony Standard Edition, you have the
@@ -76,20 +71,10 @@ To see a real-live Symfony page in action, access the following page:
 
     web/app_dev.php/demo/hello/Fabien
 
-4) Getting started with Symfony
+4) Bundles
 -------------------------------
-symfony2-sandbox
-================
 
-Plantilla para proyectos con PHP (v.5.3.8+) + Symfony2 (Standard Edition sin vendors v.2.0.12)
-
-Para una explicación más detallada de Symfony2 ver:
-[Libro de Symfony](http://symfony.com/doc/current/book/index.html)
-
-1) Bundles
-----------
-
-Este paquete viene pre-configurado con los siguientes bundles:
+This package comes pre-configured with the following bundles:
 
 *Symfony Standard Edition*
 

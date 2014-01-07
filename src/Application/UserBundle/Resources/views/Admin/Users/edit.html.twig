@@ -1,0 +1,10 @@
+{% extends 'ApplicationAdminBundle::layout.html.twig' %}
+
+{% block title 'user.admin.users.edit.title'|trans %}
+{% block page_title 'user.admin.users.edit.title'|trans %}
+
+{% block admin_content %}
+    {% embed 'ApplicationUserBundle:Admin/Users:_form.html.twig' with {
+    'submit': 'user.admin.users.edit.submit'|trans
+    } %}{% endembed %}
+{% endblock %}

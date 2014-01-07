@@ -1,6 +1,11 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: bundles/fos_user.yml}
+    - { resource: bundles/knp_menu.yml}
+    - { resource: bundles/knp_paginator.yml}
+    - { resource: bundles/stof_doctrine_extensions.yml}
+    - { resource: bundles/jms_translation.yml}
 
 framework:
     #esi:             ~

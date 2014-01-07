@@ -1,0 +1,10 @@
+{% extends "ApplicationUserBundle::layout.html.twig" %}
+
+{% block title 'user.registration.title'|trans %}
+{% block page_title 'user.registration.page_title'|trans %}
+
+{% block user_content %}
+    <p class="text-center">
+        {{ 'user.registration.check_email'|trans({'%email%': user.email})|nl2br }}
+    </p>
+{% endblock user_content %}

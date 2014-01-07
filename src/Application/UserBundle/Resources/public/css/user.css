@@ -1,0 +1,32 @@
+#profile-menu {
+    list-style-type: none;
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    margin-top: -15px;
+}
+
+#profile-menu li {
+    display: inline-block;
+    border: 1px solid #BBB;
+}
+
+#profile-menu li a {
+    display: block;
+    height: 100%;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #747474;
+    background-color: #DDD;
+}
+
+#profile-menu li a:hover {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#profile-menu li.active a {
+    background-color: transparent;
+    color: #2A2D30;
+}

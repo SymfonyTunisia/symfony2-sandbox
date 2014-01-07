@@ -1,0 +1,26 @@
+{% extends "ApplicationUserBundle::layout.html.twig" %}
+
+{% block title 'user.registration.title'|trans %}
+{% block page_title 'user.registration.page_title'|trans %}
+
+{% block user_content %}
+    <div class="span9 offset2">
+        {{ form_start(form, {
+        'action': path('fos_user_registration_register'),
+        'method': 'POST'
+        }) }}
+        {{ form_errors(form) }}
+
+        {{ form_row(form.username, {'label': 'user.form.username'|trans|colon}) }}
+        {{ form_row(form.email, {'label': 'user.form.email'|trans|colon}) }}
+        {{ form_row(form.plainPassword.first, {'label': 'user.form.password'|trans|colon}) }}
+        {{ form_row(form.plainPassword.second, {'label': 'user.form.repeated'|trans|colon}) }}
+        {{ form_row(form.recaptcha, {'label': 'user.form.recaptcha'|trans|colon}) }}
+        <div class="span10">
+            <div class="text-center">
+                <input type="submit" class="btn" value="{{ 'user.registration.submit'|trans }}" />
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock user_content %}

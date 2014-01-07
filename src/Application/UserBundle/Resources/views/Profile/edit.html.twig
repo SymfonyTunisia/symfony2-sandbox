@@ -1,0 +1,49 @@
+{% extends "ApplicationUserBundle::layout.html.twig" %}
+
+{% block title 'user.profile.edit.title'|trans %}
+{% block page_title 'user.profile.edit.page_title'|trans %}
+
+{% set menu_active = "edit" %}
+
+{% block user_content %}
+    <div class="span8 offset2">
+
+        {{ form_start(form, {
+        'action': path('fos_user_profile_edit'),
+        'method': 'POST'
+        }) }}
+        {{ form_errors(form) }}
+
+        <fieldset>
+            <legend>{{ 'user.form.fieldset.infos'|trans }}</legend>
+
+            {{ form_row(form.username, {'label': 'user.form.username'|trans|colon}) }}
+            {{ form_row(form.email, {'label': 'user.form.email'|trans|colon}) }}
+        </fieldset>
+
+        <fieldset>
+            <legend>{{ 'user.form.fieldset.identity'|trans }}</legend>
+
+            {{ form_row(form.firstname, {'label': 'user.form.firstname'|trans|colon}) }}
+            {{ form_row(form.lastname, {'label': 'user.form.lastname'|trans|colon}) }}
+            {{ form_row(form.birthdate, {'label': 'user.form.birthdate'|trans|colon}) }}
+        </fieldset>
+
+        <fieldset>
+            <legend></legend>
+
+            {{ form_row(form.current_password, {'label': 'user.form.current_password'|trans|colon}) }}
+        </fieldset>
+
+
+        <div class="text-center">
+            <input type="submit" class="btn" value="{{ 'user.profile.edit.submit'|trans }}" />
+        </div>
+        {{ form_end(form) }}
+
+        <p class="text-center">
+            <a href="{{ path('fos_user_change_password') }}">{{ 'user.change_password.page_title'|trans }}</a>
+        </p>
+
+    </div>
+{% endblock user_content %}
