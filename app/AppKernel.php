@@ -27,7 +27,10 @@ class AppKernel extends Kernel {
 				//AdmingeneratorGeneratorBundle
 				new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
 				new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-				new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),);
+				new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+				// HWIOAuthBundle
+				new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+		);
 
 		if (in_array($this->getEnvironment(), array('dev', 'test'))) {
 			$bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();

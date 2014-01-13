@@ -1,0 +1,70 @@
+# Security
+"Bad credentials": Username o password non validi
+
+# Password change
+change_password:
+    title: Cambia password
+    submit: Invia
+
+# Profile
+profile:
+    emailpolicy_send_on_new_message:
+        label: Inviami un'email quando un utente mi manda un messaggio
+    page_title: Modifica profilo
+
+# Registration
+registration:
+    action: Registrati
+    checkEmail:
+        congrats: Congratulazioni, hai appena compiuto il primo passo per fare parte di questa comunità!
+        message: |
+            Ti è stata inviata un'email contenente un link di sicurezza che dovrai aprire per attivare il tuo account.
+        page_title: Grazie per esserti registrato!
+    confirmed:
+        message: Congratulazioni <b>%username%</b>, il tuo account è ora attivo.
+        page_title: Registrazione confermata
+    email:
+        message: |
+            Ciao %username%, grazie per esserti registrato su Symfonyapplication.
+
+            Per attivare il tuo account apri questo link: %confirmationUrl%
+
+            Saluti,
+            SymfonyApplication Team.
+        message_html: |
+            Ciao %username%, grazie per esserti registrato su Symfonyapplication.
+            <br><br>
+            Per attivare il tuo account apri <a href="%confirmationUrl%">questo link.</a>
+            <br><br><br>
+            SymfonyApplication Team.
+        subject: "SymfonyApplication: Registrazione"
+    submit: Conferma iscrizione
+    title: Registrati su SymfonyApplication
+
+# Password resetting
+resetting:
+    request:
+        submit: Resetta password
+        username: "Inserisci il tuo username o il tuo indirizzo email:"
+    subtitle: |
+        Inserisci il tuo indirizzo email nel box sottostante.
+        <br><br>
+        Riceverai un'email con le istruzioni per resettare la tua password.
+    title: Richiedi reset della password
+
+# Security
+security:
+    forgot_password: hai dimenticato la password?
+    login:
+        page_title: Login
+        password: "Password"
+        remember_me: Ricordami
+        submit: Entra
+        username: "Username"
+        login_with_credentials_head: "Inserisci l'username e la password che hai scelto durante la tua registrazione per loggarti."
+        login_with_oauth:
+            head: "Utilizza uno dei seguenti provider OAuth per loggarti con il tuo account."
+            attention: ATTENZIONE!
+            attention_text: Se sei già registrato su SymfonyApplication, dovresti entrare con i tuoi username e password, e poi associare altri account forniti da autenticazioni OAuth.<br>Se hai già effettuato l'associazione, puoi ignorare questo messaggio e loggarti attraverso OAuth.
+    oauth_provider:
+        enter_with: Entra con %provider%

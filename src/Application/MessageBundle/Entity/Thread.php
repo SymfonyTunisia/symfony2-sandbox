@@ -18,7 +18,7 @@ class Thread extends BaseThread
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
-     * @ORM\generatedValue(strategy="AUTO")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
 
@@ -37,13 +37,6 @@ class Thread extends BaseThread
      */
     protected $metadata;
 
-    /**
-     * @var object $brick
-     *
-     * @ORM\ManyToOne(targetEntity="Application\SiteBundle\Entity\Brick", cascade={"persist"})
-     * @ORM\JoinColumn(name="brick_id", referencedColumnName="id", nullable=true, onDelete="CASCADE")
-     */
-    private $brick;
 
     /**************************************************************************************************
      *	custom functions
@@ -126,28 +119,5 @@ class Thread extends BaseThread
     public function getMetadata()
     {
         return $this->metadata;
-    }
-
-    /**
-     * Set brick
-     *
-     * @param \Application\SiteBundle\Entity\Brick $brick
-     * @return Thread
-     */
-    public function setBrick(\Application\SiteBundle\Entity\Brick $brick = null)
-    {
-        $this->brick = $brick;
-    
-        return $this;
-    }
-
-    /**
-     * Get brick
-     *
-     * @return \Application\SiteBundle\Entity\Brick 
-     */
-    public function getBrick()
-    {
-        return $this->brick;
     }
 }

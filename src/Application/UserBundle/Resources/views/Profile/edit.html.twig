@@ -1,49 +1,94 @@
 {% extends "ApplicationUserBundle::layout.html.twig" %}
 
-{% block title 'user.profile.edit.title'|trans %}
-{% block page_title 'user.profile.edit.page_title'|trans %}
+{% import 'ApplicationSiteBundle::macros/macrosBootstrapForms.html.twig' as macrosBootstrapForms %}
 
-{% set menu_active = "edit" %}
+{% block main %}
 
-{% block user_content %}
-    <div class="span8 offset2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
 
-        {{ form_start(form, {
-        'action': path('fos_user_profile_edit'),
-        'method': 'POST'
-        }) }}
-        {{ form_errors(form) }}
+                <h1>{{ 'profile.page_title'|trans({}, 'FOSUserBundle') }}</h1>
 
-        <fieldset>
-            <legend>{{ 'user.form.fieldset.infos'|trans }}</legend>
+                <br><br>
 
-            {{ form_row(form.username, {'label': 'user.form.username'|trans|colon}) }}
-            {{ form_row(form.email, {'label': 'user.form.email'|trans|colon}) }}
-        </fieldset>
-
-        <fieldset>
-            <legend>{{ 'user.form.fieldset.identity'|trans }}</legend>
-
-            {{ form_row(form.firstname, {'label': 'user.form.firstname'|trans|colon}) }}
-            {{ form_row(form.lastname, {'label': 'user.form.lastname'|trans|colon}) }}
-            {{ form_row(form.birthdate, {'label': 'user.form.birthdate'|trans|colon}) }}
-        </fieldset>
-
-        <fieldset>
-            <legend></legend>
-
-            {{ form_row(form.current_password, {'label': 'user.form.current_password'|trans|colon}) }}
-        </fieldset>
+                <form class="fos_user_profile_edit security-form form-horizontal" action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} method="POST" novalidate>
 
 
-        <div class="text-center">
-            <input type="submit" class="btn" value="{{ 'user.profile.edit.submit'|trans }}" />
+                    <div class="form-group {{ (form_errors(form.username))?'has-error':'' }}">
+                        <label class="col-lg-3 control-label">
+                            {{ 'form.username'|trans({}, 'FOSUserBundle') }}
+                        </label>
+                        <div class="col-lg-9">
+                            {{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
+
+                            {% if form_errors(form.username) %}
+                                <div class="help-block errors">
+                                    {{ form_errors(form.username) }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="form-group {{ (form_errors(form.email))?'has-error':'' }}">
+                        <label class="col-lg-3 control-label">
+                            {{ 'form.email'|trans({}, 'FOSUserBundle') }}
+                        </label>
+                        <div class="col-lg-9">
+                            {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+
+                            {% if form_errors(form.email) %}
+                                <div class="help-block errors">
+                                    {{ form_errors(form.email) }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">
+                            {{ form.profileImage.vars.label }}:
+                        </label>
+                        <div class="col-lg-9">
+
+                            {% if app.user.profileImage and app.user.profileImage.isReadable %}
+                                <img src="#}" class="user_profile_image">
+                            {% endif %}
+
+                            {{ form_widget(form.profileImage) }}
+
+                            {% if form_errors(form.profileImage) %}
+                                <div class="help-block errors">
+                                    {{ form_errors(form.profileImage) }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-offset-3 col-lg-9">
+                            <div class="checkbox">
+                                <label>
+                                    {{ form_widget(form.emailpolicy_send_on_new_message) }} {{ form.emailpolicy_send_on_new_message.vars.label|trans({}, 'FOSUserBundle') }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-offset-3 col-lg-9">
+                            <input type="submit" value="{{ 'profile.edit.submit'|trans({}, 'FOSUserBundle') }}" class="btn btn-primary" />
+                        </div>
+                    </div>
+
+
+                    {{ form_rest(form) }}
+
+                </form>
+
+            </div>
         </div>
-        {{ form_end(form) }}
-
-        <p class="text-center">
-            <a href="{{ path('fos_user_change_password') }}">{{ 'user.change_password.page_title'|trans }}</a>
-        </p>
-
     </div>
-{% endblock user_content %}
+
+{% endblock %}

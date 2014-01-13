@@ -2,9 +2,9 @@ parameters:
     database_driver:   pdo_mysql
     database_host:     127.0.0.1
     database_port:     ~
-    database_name:     symfony
+    database_name:     symfony_stc
     database_user:     root
-    database_password: ~
+    database_password: root
 
     mailer_transport:  smtp
     mailer_host:       127.0.0.1
@@ -12,7 +12,18 @@ parameters:
     mailer_password:   ~
 
     locale:            en
-    secret:            ThisTokenIsNotSoSecretChangeIt
-    
+    secret:            a8s7d5a7tsy98s657cfv9a7gu63urse7tdf9gx78w657du6jf
+
+    # java path required for yui compressor
+    java_path:         /usr/bin/java
+
     admin:
         mail_address: -
+
+    # oauth apps parameters
+    oauth_github_client_id:                 xxxxx
+    oauth_github_client_secret:             xxxxx
+    oauth_twitter_client_id:                xxxxx
+    oauth_twitter_client_secret:            xxxxx
+    oauth_sensiolabsconnect_client_id:      xxxxx
+    oauth_sensiolabsconnect_client_secret:  xxxxx

@@ -58,6 +58,6 @@ class NewThreadMessageFromBrickFormType extends AbstractType
 
     public function getName()
     {
-        return 'Application_message_new_thread_message_from_brick';
+        return 'application_message_new_thread_message_from_brick';
     }
 }

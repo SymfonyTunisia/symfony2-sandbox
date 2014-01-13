@@ -2,11 +2,14 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: bundles/fos_user.yml}
+    - { resource: bundles/hwi_oauth.yml}
     - { resource: bundles/fos_message.yml}
     - { resource: bundles/knp_menu.yml}
     - { resource: bundles/stof_doctrine_extensions.yml}
     - { resource: bundles/jms_translation.yml}
     - { resource: bundles/admingenerator_generator.yml}
+    - { resource: param/locales.yml }
+    - { resource: param/assetic.yml }
 
 framework:
     #esi:             ~
@@ -60,12 +63,23 @@ doctrine:
         # path:     "%database_path%"
 
     orm:
-        default_entity_manager: default
-        entity_managers:
-            default:
-                connection: default
-                mappings: 
-                    AdmingeneratorGeneratorBundle: ~
+        auto_generate_proxy_classes: "%kernel.debug%"
+        auto_mapping: true
+        mappings:
+            gedmo_translatable:
+                        type: annotation
+                        prefix: Gedmo\Translatable\Entity
+                        dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
+                        alias: GedmoTranslatable # this one is optional and will default to the name set for the mapping
+                        is_bundle: false
+            gedmo_loggable:
+                type: annotation
+                prefix: Gedmo\Loggable\Entity
+                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Entity"
+                alias: GedmoLoggable # this one is optional and will default to the name set for the mapping
+                is_bundle: false    
+            FOSMessageBundle: ~
+            
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"

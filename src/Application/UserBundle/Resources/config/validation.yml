@@ -1,0 +1,5 @@
+Application\SiteBundle\Entity\Application:
+    properties:
+        title:
+            - NotBlank:
+                message: 'Please provide a title'

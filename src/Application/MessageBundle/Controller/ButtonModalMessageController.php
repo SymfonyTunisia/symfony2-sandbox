@@ -9,8 +9,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-use Application\SiteBundle\Entity\Brick;
-
 /**
  *
  */
@@ -23,7 +21,7 @@ class ButtonModalMessageController extends Controller
      */
     public function _buttonModalMessageToUserAction(Brick $brick)
     {
-        $form = $this->createForm($this->container->get('message_bundle.Application_message_new_thread_message_from_brick_form.type'), array(
+        $form = $this->createForm($this->container->get('message_bundle.application_message_new_thread_message_from_brick_form.type'), array(
             'brick' => $brick,
             'recipient' => $brick->getUser()
         ));
@@ -42,7 +40,7 @@ class ButtonModalMessageController extends Controller
     {
         $userManager = $this->container->get('fos_user.user_manager');
 
-        $form = $this->createForm($this->container->get('message_bundle.Application_message_new_thread_message_from_brick_form.type'), array(
+        $form = $this->createForm($this->container->get('message_bundle.application_message_new_thread_message_from_brick_form.type'), array(
             'brick' => $brick,
             'recipient' => $userManager->findUserByUsername('inmarelibero'),
             'body' => $this->get('translator')->trans('fos_message_bundle.form.claim_brick.body', array(), 'FOSMessageBundle')
@@ -71,7 +69,7 @@ class ButtonModalMessageController extends Controller
             return new AccessDeniedException();
         }
 
-        $form = $this->createForm($this->container->get('message_bundle.Application_message_new_thread_message_from_brick_form.type'));
+        $form = $this->createForm($this->container->get('message_bundle.application_message_new_thread_message_from_brick_form.type'));
 
         // bind the request
         $form->handleRequest($this->getRequest());

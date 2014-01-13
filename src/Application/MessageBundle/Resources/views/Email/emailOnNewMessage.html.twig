@@ -1,4 +1,4 @@
-{% extends 'ApplicationSiteBundle:Email:email_layout.html.twig' %}
+{% extends 'ApplicationiteBundle:Email:email_layout.html.twig' %}
 
 {% block main %}
 
@@ -15,9 +15,9 @@
     {% if userMessage.thread %}
         {% set thread = userMessage.thread %}
 
-        <a href="{{ url('fos_message_thread_view', {'threadId': thread.id}) }}#message_{{ userMessage.id }}">View this message on SymfonyApplication.</a>
+        <a href="{{ url('fos_message_thread_view', {'threadId': thread.id}) }}#message_{{ userMessage.id }}">View this message on Symfonyapplication.</a>
     {% else %}
-        <a href="{{ url('fos_message_inbox') }}">View this message on SymfonyApplication.</a>
+        <a href="{{ url('fos_message_inbox') }}">View this message on Symfonyapplication.</a>
     {% endif %}
 
 {% endblock %}

@@ -1,41 +1,75 @@
-# Montage du UserBundle en mode annotation
-stc_user:
-    resource: "@ApplicationUserBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 # Montage du SiteBundle en mode annotation
-#stc_site:
-#    resource: "@ApplicationSiteBundle/Controller/"
-#    type:     annotation
-#    prefix:   /
+# additional unlocalized login action
+login:
+    pattern:   /login
+    defaults:  { _controller: FOSUserBundle:Security:login, _locale: %locale% }
 
+# required unlocalized logout action
+logout:
+    pattern:   /logout
+    defaults:  { _controller: FOSUserBundle:Security:logout, _locale: %locale% }
+
+     
+
+# FOSUserBundle routes
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+    prefix:   /{_locale}/
+    defaults:  { _locale: %locale% }
+    requirements:
+        _locale:  %route_locale_requirements%
 
 fos_user_profile:
-    resource: "@ApplicationUserBundle/Resources/config/routing/profile.xml"
-    prefix: /profile
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /{_locale}/profile
+    defaults:  { _locale: %locale% }
+    requirements:
+        _locale:  %route_locale_requirements%
 
 fos_user_register:
     resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
-    prefix: /register
+    prefix:   /{_locale}/register
+    defaults:  { _locale: %locale% }
+    requirements:
+        _locale:  %route_locale_requirements%
 
 fos_user_resetting:
     resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
-    prefix: /resetting
+    prefix: /{_locale}/resetting
+    defaults:  { _locale: %locale% }
+    requirements:
+        _locale:  %route_locale_requirements%
 
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
-    prefix: /profile
+    prefix: /{_locale}/profile
+    defaults:  { _locale: %locale% }
+    requirements:
+        _locale:  %route_locale_requirements%
 
-fos_user_group:
-    resource: "@FOSUserBundle/Resources/config/routing/group.xml"
-    prefix: /group
-    
 fos_message:
     resource: "@FOSMessageBundle/Resources/config/routing.xml"
     prefix: /{_locale}/user/message
     defaults:  { _locale: %locale% }
     requirements:
         _locale:  %route_locale_requirements%
+        
+# HWIOAuthBundle
+hwi_oauth_security:
+    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
+    prefix: /login
+
+hwi_oauth_connect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
+    prefix: /connect
+
+hwi_oauth_redirect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
+    prefix:   /connect
+
+github_login:
+    pattern: /login/check-github
+twitter_login:
+    pattern: /login/check-twitter
+sensiolabsconnect_login:
+    pattern: /login/check-sensiolabsconnect

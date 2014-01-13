@@ -2,20 +2,23 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: Application\UserBundle\Entity\User
-    group:
-        group_class: Application\UserBundle\Entity\Group
-        group_manager: application_user.group_manager
+
+    from_email:
+        address:        contact@symfony-tunisia.com
+        sender_name:    symfony-tunisia.com
+
     service:
         mailer: fos_user.mailer.twig_swift
-        user_manager: application_user.user_manager
-    from_email:
-        address:        noreply@symfony-tunisia.com
-        sender_name:    Application
+
     registration:
-        form:
-            type: application_user_registration
         confirmation:
-            enabled: true
+            enabled:    true
+            template:   ApplicationUserBundle:Registration:registration.email.twig
+
+    resetting:
+        email:
+            template:   ApplicationUserBundle:Resetting:resetting.email.twig
+
     profile:
         form:
             type: application_user_profile

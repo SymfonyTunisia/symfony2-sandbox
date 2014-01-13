@@ -1,10 +1,29 @@
 {% extends "ApplicationUserBundle::layout.html.twig" %}
 
-{% block title 'user.registration.title'|trans %}
-{% block page_title 'user.registration.page_title'|trans %}
+{% block main %}
 
-{% block user_content %}
-    <p class="text-center">
-        {{ 'user.registration.check_email'|trans({'%email%': user.email})|nl2br }}
-    </p>
-{% endblock user_content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <h1>{{ 'registration.checkEmail.page_title'|trans({}, 'FOSUserBundle') }}</h1>
+
+                <br><br>
+
+                <p>
+                    {{ 'registration.checkEmail.message'|trans({'%login_url%': url('fos_user_security_login')}, 'FOSUserBundle')|raw }}
+                </p>
+
+                <br><br>
+
+                <h3>
+                    {% autoescape 'html' %}
+                        {{ 'registration.checkEmail.congrats'|trans({}, 'FOSUserBundle') }}
+                    {% endautoescape %}
+                </h3>
+
+            </div>
+        </div>
+    </div>
+    
+{% endblock  %}

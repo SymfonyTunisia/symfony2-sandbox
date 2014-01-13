@@ -1,0 +1,201 @@
+/******************************************************************************************
+CONTROLLER-application.LESS
+
+rules for all the templates loaded through Application\UserBundle\ApplicationController
+******************************************************************************************/
+/* import assets */
+@import "../../../../SiteBundle/Resources/public/less/variables.less";
+
+/* import bootstrap assets */
+//@import "../../../../../../web/assets/bootstrap-3.0.0/less/variables.less";
+@import "../../../../../../web/assets/bootstrap-3.0.0/less/mixins.less";
+
+/**
+    Application index (user reserved area)
+    
+    route: user_Application
+*/
+body.route-user_Application {
+    table#Application-table {
+        border: 1px solid #CCC;
+    
+        thead {
+            #gradient .vertical(#F8F8F8, #DEDEDE);
+            font-weight:    bold;
+
+            td.published { width: 125px; text-align: center; }
+            td.last_update { width: 150px; }
+            td.license { width: 100px; }
+            td.actions { width: 55px; text-align: center; }
+        }
+        tbody {
+            td.published { text-align: center;
+                a {
+                    i.icon-published { color: #51A351; }
+                    i.icon-not-published {
+                        color: #CCC;
+                        &:hover { color: #E94132; }
+                    }
+                }
+            }
+            td.license { font-size: 11px; text-align: center; }
+            td.last_update {
+                font-size:  12px;
+            }
+            td.actions { text-align: center;
+                a {
+                    color: #333;
+                    margin-right:   4px;
+                }
+            }
+        }
+    }
+}
+
+/**
+    create and edit a Application
+    
+    route: user_application_new, user_application_edit
+*/
+body.route-user_application_new, body.route-user_application_create, body.route-user_application_edit, body.route-user_application_update {
+    #user-Application-edit {
+
+        a.info-modal-caller {
+            color:  #C5C5C5;
+        }
+
+        input[type="text"], textarea {
+            border-radius: 0px;
+        }
+        .control-label {
+            float: none;
+            width:  auto;
+            display: inline-block;
+            padding:    3px 0px;
+            
+            text-align: left;
+            font-weight:    normal;
+            font-size:  14px;
+        }
+        .controls {
+            margin-left:    0px;
+        }
+        .form-errors {
+            font-weight: bold;
+            color:  red;
+        }
+        .help-text {
+            margin: 0px;
+            margin-top: 10px;
+            font-size:  13px;
+            font-style: italic;
+        }
+        
+        #application_userbundle_Applicationtype_description {
+            height: 160px;
+        }
+
+        #license-wrapper {
+
+            select {
+                width:  100%;
+            }
+        }
+        
+        #tags-labels {
+            width: 100%;
+            margin-bottom:  20px;
+            position: relative;
+            height: inherit !important;
+            background: #FFF;
+            overflow: hidden;
+
+            .tag-data {
+                display:none;
+            }
+            .tags-input {
+                width:          240px;
+                margin:         0;
+                padding:        5px !important;
+                border-radius:  3px;
+                margin-bottom:  10px;
+
+                font-size:  12px !important;
+            }
+
+            .tm-tag {
+                padding:    5px 8px;
+                margin-right: 10px;
+                border-radius: 3px;
+                float: left;
+                margin-bottom: 10px;
+
+                font-size: 13px;
+                background: @sb_green_medium;
+                color: #FFF;
+
+                a {
+                    margin-left: 20px;
+                    color: #ccc;
+                }
+            }
+        }
+        
+        ul#content-tab {
+            margin-bottom:   0px;
+
+            li {
+                margin-bottom:   0px;
+
+                margin-left:   -1px;
+                &:first-child { margin-left:   0px; }
+
+                a {
+                    margin: 0px;
+                    padding:    3px 20px;
+
+                    border: 1px solid #CCC;
+                    border-bottom:  0px;
+                    .border-top-radius(3px);
+                    .border-bottom-radius(0px);
+
+                    color:  #888;
+                    font-weight:    normal;
+                    font-size:  12px;
+                }
+
+                &.active {
+                    a {
+                        #gradient .vertical(#F8F8F8, #DEDEDE);
+
+                        color:  #333;
+                        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+                        border-bottom:  0px none;
+                    }
+                }
+            }
+        }
+
+        .tab-content {
+            .tab-pane {
+                margin-top: -3px;
+            }
+
+            textarea#application_userbundle_Applicationtype_content {
+                height: 800px;
+                border-top: 0px;
+            }
+            #content-preview {
+                padding:    4px 6px;
+                border: 1px solid #CCC;
+                border-top: 0px;
+
+                pre {
+                    padding: 0px;
+                    border: 0px none;
+                    background: transparent;
+                }
+            }
+        }
+    }
+}

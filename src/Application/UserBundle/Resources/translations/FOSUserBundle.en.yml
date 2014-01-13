@@ -1,0 +1,70 @@
+# Security
+"Bad credentials": Invalid username or password
+
+# Password change
+change_password:
+    submit: Submit
+    title: Change password
+
+# Profile
+profile:
+    emailpolicy_send_on_new_message:
+        label: Send me an email when a user sends me a message
+    page_title: Edit profile
+
+# Registration
+registration:
+    action: Register
+    checkEmail:
+        congrats: Congrats, you just made the first step to be part of this community!
+        message: |
+            An email, containing a security link you must click to activate your account, has been sent to your email address.
+        page_title: Thank you for your registration!
+    confirmed:
+        message: Congrats <b>%username%</b>, your account is active.
+        page_title: Registration confirmed
+    email:
+        message: |
+            Hello %username%, thank you for registrating on Symfonyapplication.
+
+            To activate your account visit this link: %confirmationUrl%
+
+            Regards,
+            the SymfonyApplication Team.
+        message_html: |
+            Hello %username%, thank you for registrating on Symfonyapplication.
+            <br><br>
+            To activate your account visit <a href="%confirmationUrl%">this link.</a>
+            <br><br><br>
+            The SymfonyApplication Team.
+        subject: "SymfonyApplication: Registration"
+    submit: Confirm subscription
+    title: Register on SymfonyApplication
+
+# Password resetting
+resetting:
+    request:
+        submit: Reset password
+        username: "Insert your username or email address:"
+    subtitle: |
+        Insert your email address in the box below.
+        <br><br>
+        You will recive an email with the instructions to reset your password.
+    title: Request password reset
+
+# Security
+security:
+    forgot_password: forgot password?
+    login:
+        page_title: Sign in
+        password: "Password"
+        remember_me: Remember me
+        submit: Sign in
+        username: "Username"
+        login_with_credentials_head: "Enter the username and passwords you chose during your registration to sign in."
+        login_with_oauth:
+            head: "Use one of the following OAuth providers to sign in with your account."
+            attention: ATTENTION!
+            attention_text: If you already registered to SymfonyApplication, you should sign in with your username and password, and then associate other accounts provided by OAuth authentication.<br>If you already did that association, you can ignore this message and login through OAuth providers.
+    oauth_provider:
+        enter_with: Enter with %provider%

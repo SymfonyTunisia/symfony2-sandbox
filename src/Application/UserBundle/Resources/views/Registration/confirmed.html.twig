@@ -1,19 +1,23 @@
 {% extends "ApplicationUserBundle::layout.html.twig" %}
 
-{% block title 'user.registration.title'|trans %}
-{% block page_title 'user.registration.page_title'|trans %}
+{% block main %}
 
-{% block user_content %}
-    <p class="text-center">
-        {{ 'user.registration.confirmed'|trans({'%username%': user.username}) }}
-    </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
 
-    {% if app.session is not empty %}
-        {% set targetUrl = app.session.get('_security.' ~ app.security.token.providerKey ~ '.target_path') %}
-        {% if targetUrl is not empty %}
-            <p class="text-center">
-                <a href="{{ targetUrl }}">{{ 'user.registration.back'|trans }}</a>
-            </p>
-        {% endif %}
-    {% endif %}
-{% endblock user_content %}
+                <h1>{{ 'registration.confirmed.page_title'|trans({}, 'FOSUserBundle') }}</h1>
+
+                <br><br>
+
+                <p>
+                    {% autoescape 'html' %}
+                        {{ 'registration.confirmed.message'|trans({'%username%': user.username}, 'FOSUserBundle')|raw }}
+                    {% endautoescape %}
+                </p>
+
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

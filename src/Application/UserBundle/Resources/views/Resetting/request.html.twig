@@ -1,26 +1,41 @@
-{% extends "ApplicationUserBundle::layout.html.twig" %}
+{% extends "::layout.html.twig" %}
 
-{% block title 'user.resetting.title'|trans %}
-{% block page_title 'user.resetting.page_title'|trans %}
+{# META TAGS blocks #}
+{% block meta_title_content %}Request password reset | Symfonyapplication.com{% endblock %}
+{% block meta_description_content %}Did you loose your password? Request here a new one.{% endblock %}
+{# END META TAGS blocks #}
 
-{% block user_content %}
-    <div class="span8 offset2">
-        {% if invalid_username is defined %}
-            <div class="alert alert-error">
-                {{ 'user.resetting.request.invalid_username'|trans({'%username%': invalid_username}) }}
-            </div>
-        {% endif %}
+{% block main %}
 
-        <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="form-horizontal resetting">
-            <div class="control-group">
-                <label for="username" class="control-label">{{ 'user.form.username'|trans|colon }}</label>
-                <div class="controls">
-                    <input type="text" id="username" name="username" required="required" />
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1>{{ 'resetting.title'|trans({}, 'FOSUserBundle') }}</h1>
+
+                <br><br>
+
+                <p>
+                    {% autoescape 'html' %}
+                        {{ 'resetting.subtitle'|trans({}, 'FOSUserBundle')|raw }}
+                    {% endautoescape %}
+                </p>
+
+                <br><br>
+
+                <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request security-form">
+                    <div>
+                        {% if invalid_username is defined %}
+                            <p>{{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}, 'FOSUserBundle') }}</p>
+                        {% endif %}
+                        <label for="username">{{ 'resetting.request.username'|trans({}, 'FOSUserBundle')|raw }}</label>
+                        <input type="text" id="username" name="username" required="required" />
+                    </div>
+                    <div>
+                        <input type="submit" value="{{ 'resetting.request.submit'|trans({}, 'FOSUserBundle') }}" class="btn btn-primary" />
+                    </div>
+                </form>
             </div>
-            <div class="text-center">
-                <input type="submit" class="btn" value="{{ 'user.resetting.request.submit'|trans }}" />
-            </div>
-        </form>
+        </div>
     </div>
-{% endblock user_content %}
+    
+{% endblock %}
