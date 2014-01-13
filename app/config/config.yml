@@ -2,9 +2,11 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: bundles/fos_user.yml}
+    - { resource: bundles/fos_message.yml}
     - { resource: bundles/knp_menu.yml}
     - { resource: bundles/stof_doctrine_extensions.yml}
     - { resource: bundles/jms_translation.yml}
+    - { resource: bundles/admingenerator_generator.yml}
 
 framework:
     #esi:             ~

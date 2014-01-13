@@ -22,10 +22,10 @@
 		"sensio/generator-bundle" : "2.3.*",
 		"incenteev/composer-parameter-handler" : "~2.0",
 		
-
-		"friendsofsymfony/user-bundle": "2.0.*@dev",
-		"stof/doctrine-extensions-bundle": "1.1.*@dev",
+        "friendsofsymfony/user-bundle": "2.0.*@dev",
+        "friendsofsymfony/message-bundle": "1.2.*@dev",
 		"jms/translation-bundle": "1.1.*@dev",
+        "stof/doctrine-extensions-bundle": "1.1.*@dev",
 		 "cedriclombardot/admingenerator-generator-bundle": "2.3.*@dev"
 		 
 	},
@@ -49,7 +49,7 @@
 		"bin-dir" : "bin",
 		"component-dir": "web/components" 
 	},
-	"minimum-stability" : "alpha",
+	"minimum-stability" : "stable",
 	"extra" : {
 		"symfony-app-dir" : "app",
 		"symfony-web-dir" : "web",

@@ -1,0 +1,41 @@
+# Montage du UserBundle en mode annotation
+stc_user:
+    resource: "@ApplicationUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+# Montage du SiteBundle en mode annotation
+#stc_site:
+#    resource: "@ApplicationSiteBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@ApplicationUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+fos_user_group:
+    resource: "@FOSUserBundle/Resources/config/routing/group.xml"
+    prefix: /group
+    
+fos_message:
+    resource: "@FOSMessageBundle/Resources/config/routing.xml"
+    prefix: /{_locale}/user/message
+    defaults:  { _locale: %locale% }
+    requirements:
+        _locale:  %route_locale_requirements%
