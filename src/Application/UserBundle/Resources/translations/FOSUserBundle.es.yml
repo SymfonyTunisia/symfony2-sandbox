@@ -25,21 +25,21 @@ registration:
         page_title: Inscripción confirmada
     email:
         message: |
-            Hola %username%, gracias por inscribirte en Symfonyapplication.
+            Hola %username%, gracias por inscribirte en Symfony Sandbox.
 
             Para activar tu cuenta abre este enlace: %confirmationUrl%
 
             Saludos,
-            Eqiupo de Symfonyapplication.
+            Eqiupo de Symfony Sandbox.
         message_html: |
-            Hola %username%, gracias por inscribirte en Symfonyapplication.
+            Hola %username%, gracias por inscribirte en Symfony Sandbox.
             <br><br>
             Para activar tu cuenta abre <a href="%confirmationUrl%">este enlace</a>.
             <br><br><br>
-            Eqiupo de Symfonyapplication.
-        subject: "SymfonyApplication: Inscripción"
+            Eqiupo de Symfony Sandbox.
+        subject: "Symfony Sandbox: Inscripción"
     submit: Confirmar inscripción
-    title: Inscripción a SymfonyApplication
+    title: Inscripción a Symfony Sandbox
 
 # Password resetting
 resetting:
@@ -65,6 +65,6 @@ security:
         login_with_oauth:
             head: "Utiliza uno de los siguientes proveedores de OAuth para iniciar sesión con tu cuenta."
             attention: ATENCIÓN!
-            attention_text: Si ya te has registrado en SymfonyApplication, deberías iniciar sesión con tu nombre de usuario y contraseña, y luego asociar otras cuentas proporcionadas por OAuth.<br>Si ya hiciste esa asociación, puedes ignorar este mensaje y acceder a través de OAuth.
+            attention_text: Si ya te has registrado en Symfony Sandbox, deberías iniciar sesión con tu nombre de usuario y contraseña, y luego asociar otras cuentas proporcionadas por OAuth.<br>Si ya hiciste esa asociación, puedes ignorar este mensaje y acceder a través de OAuth.
     oauth_provider:
         enter_with: Entra con %provider%

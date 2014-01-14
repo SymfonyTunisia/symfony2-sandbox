@@ -20,9 +20,6 @@ class ProfileFormType extends BaseType
             'translation_domain' => 'FOSUserBundle',
         ));
 
-        $builder->add('profileImage', null, array(
-            'label' => 'Profile image'
-        ));
 
         /**
          * Event subscriber for generated email

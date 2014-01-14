@@ -12,10 +12,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
  */
 class DefaultController extends Controller
 {
-    /**
-     * @Route("/dashboard", name="user_dashboard")
-     * @Template()
-     */
+
     public function dashboardAction()
     {
         return array();

@@ -2,7 +2,7 @@
 
 {% block main %}
 
-    {{ sender.username }} sent you this message on SymfonyApplication:
+    {{ sender.username }} sent you this message on Symfony SandboxSandbox:
 
     <br><br>
 
@@ -15,9 +15,9 @@
     {% if userMessage.thread %}
         {% set thread = userMessage.thread %}
 
-        <a href="{{ url('fos_message_thread_view', {'threadId': thread.id}) }}#message_{{ userMessage.id }}">View this message on Symfonyapplication.</a>
+        <a href="{{ url('fos_message_thread_view', {'threadId': thread.id}) }}#message_{{ userMessage.id }}">View this message on Symfony SandboxSandbox.</a>
     {% else %}
-        <a href="{{ url('fos_message_inbox') }}">View this message on Symfonyapplication.</a>
+        <a href="{{ url('fos_message_inbox') }}">View this message on Symfony Sandboxy Sandbox.</a>
     {% endif %}
 
 {% endblock %}

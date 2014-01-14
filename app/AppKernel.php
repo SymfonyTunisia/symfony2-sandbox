@@ -14,6 +14,8 @@ class AppKernel extends Kernel {
 				new Symfony\Bundle\AsseticBundle\AsseticBundle(),
 				new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
 				new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+				//Utils
+				new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
 				// FOSUserBundle
 				new FOS\UserBundle\FOSUserBundle(),
 				new Application\UserBundle\ApplicationUserBundle(),
@@ -27,9 +29,7 @@ class AppKernel extends Kernel {
 				//AdmingeneratorGeneratorBundle
 				new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
 				new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-				new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
-				// HWIOAuthBundle
-				new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+				new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle()
 		);
 
 		if (in_array($this->getEnvironment(), array('dev', 'test'))) {

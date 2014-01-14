@@ -1,15 +1,17 @@
-# Montage du SiteBundle en mode annotation
-# additional unlocalized login action
+homepage:
+    pattern:  /
+    defaults:  { _controller: FOSUserBundle:Security:login, _locale: %locale% }
+user_dashboard:
+    pattern:  /dashboard
+    defaults:  { _controller: ApplicationUserBundle:Default:dashboard, _locale: %locale% }       
+# required unlocalized login action
 login:
     pattern:   /login
     defaults:  { _controller: FOSUserBundle:Security:login, _locale: %locale% }
-
 # required unlocalized logout action
 logout:
     pattern:   /logout
     defaults:  { _controller: FOSUserBundle:Security:logout, _locale: %locale% }
-
-     
 
 # FOSUserBundle routes
 fos_user_security:
@@ -46,30 +48,10 @@ fos_user_change_password:
     defaults:  { _locale: %locale% }
     requirements:
         _locale:  %route_locale_requirements%
-
+# FOSMessageBundle routes       
 fos_message:
     resource: "@FOSMessageBundle/Resources/config/routing.xml"
     prefix: /{_locale}/user/message
     defaults:  { _locale: %locale% }
     requirements:
         _locale:  %route_locale_requirements%
-        
-# HWIOAuthBundle
-hwi_oauth_security:
-    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
-    prefix: /login
-
-hwi_oauth_connect:
-    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
-    prefix: /connect
-
-hwi_oauth_redirect:
-    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
-    prefix:   /connect
-
-github_login:
-    pattern: /login/check-github
-twitter_login:
-    pattern: /login/check-twitter
-sensiolabsconnect_login:
-    pattern: /login/check-sensiolabsconnect

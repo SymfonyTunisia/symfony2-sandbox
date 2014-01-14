@@ -22,7 +22,7 @@ user_navbar:
 user:
     oauth:
         account_associated: "Actualmente tienes una cuenta de %oauth_provider% conectada correctamente. Haz click <a href=\"%url%\">aquí</a> para sustituirla por otra."
-        account_not_associated: "Haz click <a href=\"%url%\">aquí</a> para conectar tu cuenta %oauth_provider% con la de Symfonyapplication."
+        account_not_associated: "Haz click <a href=\"%url%\">aquí</a> para conectar tu cuenta %oauth_provider% con la de Symfony Sandbox."
 
 # Application
 # Application related interfaces
@@ -48,7 +48,7 @@ Application:
                         <b>incluir todas las palabras clave</b>: tratar de incluir en el título todas las palabras clave relacionadas con el tema que estás tratando
                     </li>
                     <li>
-                        <b>ser comprensible</b>: el título debería ser lo más breve y simple posible, este campo se mostrará en todo symfonyapplication.com, y también en las páginas de los resultados de los motores de búsqueda
+                        <b>ser comprensible</b>: el título debería ser lo más breve y simple posible, este campo se mostrará en todo Symfony Sandbox.com, y también en las páginas de los resultados de los motores de búsqueda
                     </li>
                 </ul>
                 <br><br>
@@ -88,9 +88,9 @@ Application:
             body: |
                 Puedes especificar una url canónica de un application. Utilizando la definición de Google, <b>una página canónica es la versión preferida de un conjunto de páginas con contenido muy similar.</b>
                 <br><br>
-                Este campo es útil por ejemplo cuando publicas una guía en tu blog, y luego publicas el mismo contenido en SymfonyApplication también. La <b> Url canónica </ b> permite a Google que no penalize a su entrada de blog en los resultados de búsqueda debido a la repetición del contenido en Symfonyapplication.
+                Este campo es útil por ejemplo cuando publicas una guía en tu blog, y luego publicas el mismo contenido en Symfony Sandbox también. La <b> Url canónica </ b> permite a Google que no penalize a su entrada de blog en los resultados de búsqueda debido a la repetición del contenido en Symfony Sandbox.
                 <br><br>
-                Pon en este campo la url del artículo original/blog post/página web, de esta manera Google dará prioridad a él en lugar de los contenidos publicados en Symfonyapplication.
+                Pon en este campo la url del artículo original/blog post/página web, de esta manera Google dará prioridad a él en lugar de los contenidos publicados en Symfony Sandbox.
                 <br><br><br>
                 Más informaciones están disponibles en <a href="http://support.google.com/webmasters/bin/answer.py?hl=en&answer=139394" target="_new"> esta página de ayuda de Google. </a>
             title: "Application: Url canónica"
@@ -115,7 +115,7 @@ Application:
             body: |
                 Puedes elegir una licencia para que sea aplicada a tu guía simplemente eligiendo una en el campo "Licencia".
                 <br><br>
-                Si no solicitas una licencia, Symfonyapplication.com reclamará ningún derecho de propiedad intelectual sobre el material que proporcionas. Tu perfil y materiales subidos siguen siendo tuyos. Sin embargo, debido a que el material es visto en público, te comprometes a permitir que otras personas vean tu contenido. De forma predeterminada ninguna licencia se aplica.
+                Si no solicitas una licencia, Symfony Sandbox.com reclamará ningún derecho de propiedad intelectual sobre el material que proporcionas. Tu perfil y materiales subidos siguen siendo tuyos. Sin embargo, debido a que el material es visto en público, te comprometes a permitir que otras personas vean tu contenido. De forma predeterminada ninguna licencia se aplica.
                 <br><br>
                 Material sin una licencia explícita está protegido por copyright y es por defecto <b>Todos los derechos reservados</b>. La persona o personas que escribieron el material están protegidas de esta forma.
                 <br>

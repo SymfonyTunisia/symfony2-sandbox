@@ -8,8 +8,8 @@ use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\GroupableInterface;
 
 /**
- * @ORM\Entity(repositoryClass="Nantarena\UserBundle\Repository\GroupRepository")
- * @ORM\Table(name="group")
+ * @ORM\Entity
+ * @ORM\Table(name="fos_group")
  */
 class Group extends BaseGroup
 {

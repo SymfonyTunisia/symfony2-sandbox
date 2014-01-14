@@ -22,7 +22,7 @@ user_navbar:
 user:
     oauth:
         account_associated: "In questo momento hai un account %oauth_provider% connesso correttamente. Clicca <a href=\"%url%\">qui</a> per sostituirlo con un altro."
-        account_not_associated: "Clicca <a href=\"%url%\">qui</a> per connettere il tuo account %oauth_provider% a quello di Symfonyapplication."
+        account_not_associated: "Clicca <a href=\"%url%\">qui</a> per connettere il tuo account %oauth_provider% a quello di Symfony Sandbox."
 
 # Application
 # Application related interfaces
@@ -48,7 +48,7 @@ Application:
                         <b>comprendere tutte le keywords</b>: prova ad inserire nel titolo tutte le parole chiave relative all'argomento che stai trattando
                     </li>
                     <li>
-                        <b>essere comprensibile</b>: Il titolo dovrebbe essere più corto e semplice possibile; questo campo verrà visualizzato in tutto symfonyapplication.com, e anche nelle pagine dei risultati dei vari motori di ricerca
+                        <b>essere comprensibile</b>: Il titolo dovrebbe essere più corto e semplice possibile; questo campo verrà visualizzato in tutto Symfony Sandbox.com, e anche nelle pagine dei risultati dei vari motori di ricerca
                     </li>
                 </ul>
                 <br><br>
@@ -88,9 +88,9 @@ Application:
             body: |
                 Puoi specificare un Url canonico per un application. Richiamando la definizione di Google, <b>una Canonical Page è la versione preferita in un set di pagine che hanno un contenuto altamente simile.</b>
                 <br><br>
-                Questo campo è utile ad esempio quando pubblichi una guida sul tuo blog, e successivamente pubblichi lo stesso materiale anche su Symfonyapplication. L'<b>Url canonico</b> permette a Google di non penalizzare il post sul tuo blog nei risultati delle ricerche, cosa che si verificherebbe per la duplicazione dei contenuti.
+                Questo campo è utile ad esempio quando pubblichi una guida sul tuo blog, e successivamente pubblichi lo stesso materiale anche su Symfony Sandbox. L'<b>Url canonico</b> permette a Google di non penalizzare il post sul tuo blog nei risultati delle ricerche, cosa che si verificherebbe per la duplicazione dei contenuti.
                 <br><br>
-                Specifica in questo campo l'url dell'articolo/post/pagina web originale, così Google darà priorità a quello invece che al materiale duplicato pubblicato su Symfonyapplication.
+                Specifica in questo campo l'url dell'articolo/post/pagina web originale, così Google darà priorità a quello invece che al materiale duplicato pubblicato su Symfony Sandbox.
                 <br><br><br>
                 Maggiori informazioni sono disponibili su <a href="http://support.google.com/webmasters/bin/answer.py?hl=en&answer=139394" target="_new">questa pagina di Google.</a>
             title: "Application: Url canonico"
@@ -115,7 +115,7 @@ Application:
             body: |
                 Puoi scegliere di applicare una licenza alla tua guida semplicemente selezionandone una nel campo "Licenza".
                 <br><br>
-                Se scegli di non applicare nessuna licenza, Symfonyapplication.com non reclamerà nessuna proprietà intellettuale sul materiale che hai prodotto. Il tuo profilo e il tuo materiale rimane tuo. Comunque, dal momento che il materiale è visibile pubblicamente, sei d'accordo che gli altri possano visualizzare il tuo materiale. In automatico non viene applicata nessuna licenza.
+                Se scegli di non applicare nessuna licenza, Symfony Sandbox.com non reclamerà nessuna proprietà intellettuale sul materiale che hai prodotto. Il tuo profilo e il tuo materiale rimane tuo. Comunque, dal momento che il materiale è visibile pubblicamente, sei d'accordo che gli altri possano visualizzare il tuo materiale. In automatico non viene applicata nessuna licenza.
                 <br><br>
                 Il materiale senza una licenza esplicita è protetto da copyright ed è di default <b>Tutti i diritti riservati</b>. La persona o le persone che hanno scritto il materiale sono protette così.
                 <br>

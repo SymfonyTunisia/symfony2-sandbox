@@ -1,14 +1,14 @@
-{% block subject %}SymfonyApplication: Registration{% endblock %}
+{% block subject %}Symfony Sandbox: Registration{% endblock %}
 
 {% block body_text %}
 Hello {{ user.username }}, you requested to reset your password.
 
 To change your password simply visit this link: {{ confirmationUrl }}
 
-You will then be able to sign in on: http://symfonyapplication.com/login
+You will then be able to sign in on: http://Symfony Sandbox.com/login
 
 Regards,
-the SymfonyApplication Team.
+the Symfony Sandbox Team.
 
 Greetings,
 the Acme team
@@ -22,5 +22,5 @@ To change your password simply visit <a href="{{ confirmationUrl }}">this link.<
 You will then be able to sign in on <a href="{{ url('fos_user_security_login') }}">{{ url('fos_user_security_login') }}</a>
 <br><br><br>
 Regards,
-<br>the SymfonyApplication Team.
+<br>the Symfony Sandbox Team.
 {% endblock %}

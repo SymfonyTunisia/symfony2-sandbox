@@ -1,6 +1,5 @@
 {% extends 'FOSMessageBundle::layout.html.twig' %}
 
-{% import 'ApplicationiteBundle::macros/macrosBootstrapForms.html.twig' as macrosBootstrapForms %}
 
 {% block fos_message_content %}
 
@@ -10,21 +9,6 @@
             <legend>
                 {{ 'fos_message_bundle.send_new_title'|trans({}, 'FOSMessageBundle') }}
             </legend>
-        
-            {{ macrosBootstrapForms.controlGroup(form.recipient, {
-                label: 'fos_message_bundle.form.recipient.label'|trans({}, 'FOSMessageBundle'),
-                helpBlock: 'fos_message_bundle.form.recipient.help_block'|trans({}, 'FOSMessageBundle')
-            }) }}
-    
-            {{ macrosBootstrapForms.controlGroup(form.subject, {
-                label: 'fos_message_bundle.form.subject.label'|trans({}, 'FOSMessageBundle'),
-                helpBlock: 'fos_message_bundle.form.subject.help_block'|trans({}, 'FOSMessageBundle')
-            }) }}
-            
-            {{ macrosBootstrapForms.controlGroup(form.body, {
-                label: 'fos_message_bundle.form.body.label'|trans({}, 'FOSMessageBundle')
-            }) }}
-            
             <div class="form-actions">
                 <button class="btn btn-primary" type="submit">
                     <span class="glyphicon glyphicon-ok"></span> {{ 'fos_message_bundle.send'|trans({}, 'FOSMessageBundle')|capitalize }}

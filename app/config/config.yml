@@ -2,7 +2,6 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: bundles/fos_user.yml}
-    - { resource: bundles/hwi_oauth.yml}
     - { resource: bundles/fos_message.yml}
     - { resource: bundles/knp_menu.yml}
     - { resource: bundles/stof_doctrine_extensions.yml}
@@ -87,3 +86,9 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+    
+services:
+ twig.extension.text:
+     class: Twig_Extensions_Extension_Text
+     tags:
+         - { name: twig.extension }

@@ -35,7 +35,7 @@ class MessageEventsListener
             if (true === $recipient->getEmailpolicySendOnNewMessage()) {
 
                 $email = \Swift_Message::newInstance()
-                    ->setSubject("SymfonyApplication: {$sender->getUsername()} sent you a new message")
+                    ->setSubject("Symfony Sandbox Sandbox: {$sender->getUsername()} sent you a new message")
                     ->setFrom($this->adminParameter['mail_address'])
                     ->setTo($recipient->getEmail())
                     ->setBody(

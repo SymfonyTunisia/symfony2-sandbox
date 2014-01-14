@@ -22,8 +22,9 @@
 		"sensio/generator-bundle" : "2.3.*",
 		"incenteev/composer-parameter-handler" : "~2.0",
 		
+		"doctrine/doctrine-fixtures-bundle": "v2.2.0",
+		
         "friendsofsymfony/user-bundle": "2.0.*@dev",
-        "hwi/oauth-bundle": "0.3.*@dev",
         "friendsofsymfony/message-bundle": "1.2.*@dev",
 		"jms/translation-bundle": "1.1.*@dev",
         "stof/doctrine-extensions-bundle": "1.1.*@dev",

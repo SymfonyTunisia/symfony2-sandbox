@@ -22,7 +22,7 @@ user_navbar:
 user:
     oauth:
         account_associated: "You currently have a %oauth_provider% account successfully connected. Click <a href=\"%url%\">here</a> to replace it with another one."
-        account_not_associated: "Click <a href=\"%url%\">here</a> to connect your %oauth_provider% account to SymfonyApplication' one."
+        account_not_associated: "Click <a href=\"%url%\">here</a> to connect your %oauth_provider% account to Symfony Sandbox' one."
 
 # Application
 # Application related interfaces
@@ -48,7 +48,7 @@ Application:
                         <b>full of keywords</b>: try putting in the title all the keywords related to the subject of your guide
                     </li>
                     <li>
-                        <b>comprehensive</b>: the title should be as short and simple as possible; this field will be displayed in the whole symfonyapplication.com as well as in the result pages of the search engines
+                        <b>comprehensive</b>: the title should be as short and simple as possible; this field will be displayed in the whole Symfony Sandbox.com as well as in the result pages of the search engines
                     </li>
                 </ul>
                 <br><br>
@@ -88,9 +88,9 @@ Application:
             body: |
                 You can specify a canonical url for a application. Using Google's definition, <b>a canonical page is the preferred version of a set of pages with highly similar content.</b>
                 <br><br>
-                This field is useful for example when you publish a guide on your blog, and then publish the same content on SymfonyApplication too. The <b>Canonical url</b> lets Google not to punish your blog post in search results because of the repetition of the content in Symfonyapplication.
+                This field is useful for example when you publish a guide on your blog, and then publish the same content on Symfony Sandbox too. The <b>Canonical url</b> lets Google not to punish your blog post in search results because of the repetition of the content in Symfony Sandbox.
                 <br><br>
-                Put in this field the url of the original article/blog post/webpage, so google will give priority to it instead of the content published on Symfonyapplication.
+                Put in this field the url of the original article/blog post/webpage, so google will give priority to it instead of the content published on Symfony Sandbox.
                 <br><br><br>
                 More infos are available on <a href="http://support.google.com/webmasters/bin/answer.py?hl=en&answer=139394" target="_new">this Google help page.</a>
             title: "Application: Canonical url"
@@ -115,7 +115,7 @@ Application:
             body: |
                 You can choose a license to apply to your guide by simply picking one in the field "License".
                 <br><br>
-                If you don't apply any license, Symfonyapplication.com will claim no intellectual property rights over the material you provide. Your profile and materials uploaded remain yours. However, because the material is publicly viewed, you agree to allow others to view your content. By default no license is applied.
+                If you don't apply any license, Symfony Sandbox.com will claim no intellectual property rights over the material you provide. Your profile and materials uploaded remain yours. However, because the material is publicly viewed, you agree to allow others to view your content. By default no license is applied.
                 <br><br>
                 Material without an explicit license is protected by copyright and is by default <b>All Rights Reserved</b>. The person or people who wrote the material are protected as such.
                 <br>

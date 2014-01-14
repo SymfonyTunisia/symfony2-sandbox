@@ -25,21 +25,21 @@ registration:
         page_title: Registration confirmed
     email:
         message: |
-            Hello %username%, thank you for registrating on Symfonyapplication.
+            Hello %username%, thank you for registrating on Symfony SandboxSandbox.
 
             To activate your account visit this link: %confirmationUrl%
 
             Regards,
-            the SymfonyApplication Team.
+            the Symfony SandboxSandbox Team.
         message_html: |
-            Hello %username%, thank you for registrating on Symfonyapplication.
+            Hello %username%, thank you for registrating on Symfony SandboxSandbox.
             <br><br>
             To activate your account visit <a href="%confirmationUrl%">this link.</a>
             <br><br><br>
-            The SymfonyApplication Team.
-        subject: "SymfonyApplication: Registration"
+            The Symfony SandboxSandbox Team.
+        subject: "Symfony SandboxSandbox: Registration"
     submit: Confirm subscription
-    title: Register on SymfonyApplication
+    title: Register on Symfony SandboxSandbox
 
 # Password resetting
 resetting:
@@ -65,6 +65,6 @@ security:
         login_with_oauth:
             head: "Use one of the following OAuth providers to sign in with your account."
             attention: ATTENTION!
-            attention_text: If you already registered to SymfonyApplication, you should sign in with your username and password, and then associate other accounts provided by OAuth authentication.<br>If you already did that association, you can ignore this message and login through OAuth providers.
+            attention_text: If you already registered to Symfony Sandbox, you should sign in with your username and password, and then associate other accounts provided by OAuth authentication.<br>If you already did that association, you can ignore this message and login through OAuth providers.
     oauth_provider:
         enter_with: Enter with %provider%
