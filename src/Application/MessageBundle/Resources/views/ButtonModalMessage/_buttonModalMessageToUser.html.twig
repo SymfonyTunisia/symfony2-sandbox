@@ -1,6 +1,0 @@
-{% extends 'ApplicationMessageBundle:ButtonModalMessage:_buttonModalMessage.html.twig' %}
-
-{# to refactor: may be not unique in the page #}
-{% set form_id = 'form-modal-message-to-user' %}
-
-{% set call_to_action_value = '<span class="glyphicon glyphicon-envelope"></span> '~'fos_message_bundle.send_from_brick'|trans({}, 'FOSMessageBundle')|capitalize %}
