@@ -1,57 +1,23 @@
-homepage:
-    pattern:  /
-    defaults:  { _controller: FOSUserBundle:Security:login, _locale: %locale% }
-user_dashboard:
-    pattern:  /dashboard
-    defaults:  { _controller: ApplicationUserBundle:Default:dashboard, _locale: %locale% }       
-# required unlocalized login action
-login:
-    pattern:   /login
-    defaults:  { _controller: FOSUserBundle:Security:login, _locale: %locale% }
-# required unlocalized logout action
-logout:
-    pattern:   /logout
-    defaults:  { _controller: FOSUserBundle:Security:logout, _locale: %locale% }
+# Internal routing configuration to handle ESI
+#_internal:
+#   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#   prefix:   /_internal
+#
+# Support for LiipImagineBundle
+#_imagine:
+#    resource: .
+#    type:     imagine
 
-# FOSUserBundle routes
-fos_user_security:
-    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
-    prefix:   /{_locale}/
-    defaults:  { _locale: %locale% }
-    requirements:
-        _locale:  %route_locale_requirements%
+_front:
+    resource: routing_front.yml
 
-fos_user_profile:
-    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
-    prefix: /{_locale}/profile
-    defaults:  { _locale: %locale% }
-    requirements:
-        _locale:  %route_locale_requirements%
+_admin:
+    resource: routing_admin.yml
+    prefix:   /admin
 
-fos_user_register:
-    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
-    prefix:   /{_locale}/register
-    defaults:  { _locale: %locale% }
-    requirements:
-        _locale:  %route_locale_requirements%
+_api:
+    resource: routing_api.yml
+    prefix:   /api
 
-fos_user_resetting:
-    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
-    prefix: /{_locale}/resetting
-    defaults:  { _locale: %locale% }
-    requirements:
-        _locale:  %route_locale_requirements%
 
-fos_user_change_password:
-    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
-    prefix: /{_locale}/profile
-    defaults:  { _locale: %locale% }
-    requirements:
-        _locale:  %route_locale_requirements%
-# FOSMessageBundle routes       
-fos_message:
-    resource: "@FOSMessageBundle/Resources/config/routing.xml"
-    prefix: /{_locale}/user/message
-    defaults:  { _locale: %locale% }
-    requirements:
-        _locale:  %route_locale_requirements%
+

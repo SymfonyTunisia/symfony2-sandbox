@@ -1,0 +1,12 @@
+pages:
+    whoWeAre:
+        name: 'Qui sommes-nous'
+        title: 'Qui sommes-nous'
+        template: 'default'
+        slug: 'who-we-are'
+        url: 'who-we-are'
+        route: 'whoWeAre'
+        reference: 'page-homepage'
+        meta:
+            keywords: "Symfony Tunisia Community"
+            description: "Symfony Tunisia Community - Qui sommes-nous"
