@@ -1,35 +1,31 @@
-Terres de fenêtre
-
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/b942e021-0577-42e7-846e-d21b46b3ee48/big.png)](https://insight.sensiolabs.com/projects/b942e021-0577-42e7-846e-d21b46b3ee48)
-
 Install using Vagrant
 ---------------------
 
 From the host
 
-    git clone https://github.com/SymfonyTunisia/web-site.git
-    cd web-site
+    git clone https://github.com/SymfonyTunisia/symfony2-sandbox
+    cd symfony-sandbox
     vagrant up
     vagrant ssh
 
 
 Inside the VM
 
-    cd /var/www/stc
+    cd /var/www/symfony-sandbox
     composer update
     make install
 
 
 Edit your hosts file (/etc/hosts) and add :
 
-    192.168.56.103  stc.dev www.stc.dev
+    192.168.56.107  symfony-sandbox.dev www.symfony-sandbox.dev
 
 You can now access project page at
 
-[https://stc.dev/](https://stc.dev/) (prod env)
+[https://symfony-sandbox.dev/](https://symfony-sandbox.dev/) (prod env)
 
-[https://stc.dev/app_dev.php](https://stc.dev/app_dev.php) (dev env)
+[https://symfony-sandbox.dev/app_dev.php](https://symfony-sandbox.dev/app_dev.php) (dev env)
 
-[http://www.stc.dev:1080/](http://www.stc.dev:1080/) (mailcatcher)
+[http://www.symfony-sandbox.dev:1080/](http://www.symfony-sandbox.dev:1080/) (mailcatcher)
 
-Admin Mysql : [adminer](http://192.168.56.102/adminer/)
+Admin Mysql : [adminer](http://192.168.56.107/adminer/)

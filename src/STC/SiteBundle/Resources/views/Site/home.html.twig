@@ -1,16 +1,35 @@
-<div class="slider">
-    {{ render(controller('STCSiteBundle:Site:slider')) }}
-</div>
-<div class="container presentation">
-    {% include "STCSiteBundle:Site:welcome.html.twig" %}
-    <div class="what-we-do container">
+<div class="page-title">
+    <div class="container">
         <div class="row">
-            {% include "STCSiteBundle:Site:aboutMe.html.twig" %}
-            {{ render(controller('STCSiteBundle:Site:sponsor')) }}
-        </div>
+            <div class="span12">
+                <i class="icon-tasks page-title-icon"></i>
 
+                <h2>Symfony TN /</h2>
+
+                <p>C'est quoi symfony?</p>
+            </div>
+        </div>
     </div>
 </div>
-<div class="portfolio container portfolio-index">
-    {{ render(controller('STCEventBundle:Event:lastEvent')) }}
+<div class="services-full-width container">
+    <div class="row">
+        <div class="services-full-width-text span12">
+
+            <p>
+                Symfony est un Framework PHP Open-Source, dont l’objectif est de développer des applications web
+                professionnelles en utilisant le langage PHP.
+            </p>
+
+            <p>
+                Symfony apporte une architecture, des composants et des outils pour que les développeurs construisent
+                des applications web complexes plus rapidement. Choisir Symfony permet de publier vos applications plus
+                tôt, de les héberger et de les diffuser sans problème, et ainsi de les maintenir dans le temps sans
+                mauvaise surprise. Symfony est basé sur l’expérience. Des milliers de développeurs font désormais
+                confiance à Symfony pour leurs applications.Symfony est utilisé par de nombreuses entreprises comme
+                Yahoo!, Dailymotion, Ted.com, Electronic Arts, Orange, Arianespace, et bien d’autres encore. Plus de
+                détails sur : www.symfony.com
+
+            </p>
+        </div>
+    </div>
 </div>

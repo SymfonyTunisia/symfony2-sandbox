@@ -1,8 +1,57 @@
 {% extends 'ApplicationSonataPageBundle::base_layout.html.twig' %}
 
 {% block sonata_page_container %}
-    <!--============================== header =================================-->
-    {{ sonata_block_render({ 'type':'sonata.page.block.header'}) }}
+    <div class="container">
+        <div class="header row">
+            <div class="span12">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+
+                        <h1>
+                            <a class="brand" href="{{ path('home') }}">
+                                <img alt="Symfony Tunisia Community" width="250" height="60"
+                                     src="{{ asset('bundles/stcsite/img/logo.png') }}">
+                            </a>
+                        </h1>
+
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right">
+                                <li {% if app.request.get('_route') == 'home' %} class="current-page" {% endif %}>
+                                    <a href="{{ path('home') }}">
+                                        <i class="icon-home"></i><br/>
+                                        Accueil
+                                    </a>
+                                </li>
+                                <li {% if app.request.get('_route') == 'whoWeAre' %} class="current-page" {% endif %}>
+                                    <a href="{{ path('whoWeAre') }}">
+                                        <i class="icon-user"></i><br/>
+                                        Qui sommes-nous
+                                    </a>
+                                </li>
+                                <li {% if app.request.get('_route') == 'symfonyTn' %} class="current-page" {% endif %}>
+                                    <a href="{{ path('symfonyTn') }}">
+                                        <i class="icon-tasks"></i><br/>
+                                        Symphony tn</a>
+                                </li>
+                                <li {% if app.request.get('_route') in ['sonata_news_archive','sonata_news_archive_monthly',' sonata_news_tag','sonata_news_collection ','sonata_news_archive_yearly','sonata_news_comment_moderation','sonata_news_view',' sonata_news_home'] %} class="current-page" {% endif %}>
+                                    <a href="{{ path('sonata_news_archive') }}">
+                                        <i class="icon-file"></i><br/>
+                                        Actualité
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     {% block page_content %}
         {% if content is defined %}
             {{ content|raw }}
@@ -15,6 +64,47 @@
             {% endif %}
         {% endif %}
     {% endblock %}
-    <!--============================== footer =================================-->
-    {{ sonata_block_render({ 'type':'sonata.page.block.footer'}) }}
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="widget span3">
+                    <h5><a href="{{ path('whoWeAre') }}">Qui sommes-nous</a></h5>
+                    <h5><a href="{{ path('symfonyTn') }}">Symfony TN</a></h5>
+                    <h5><a href="{{ path('sonata_news_archive') }}">Actualités</a></h5>
+                </div>
+                <div class="widget span3">
+                    <h4>Derniers Tweets</h4>
+
+                    <div class="show-tweets">
+                    </div>
+                </div>
+                <div class="widget span3">
+                    <h4>Facebook Photos</h4>
+
+                    <div class="show-facebook">
+                    </div>
+                </div>
+                <div class="widget span3">
+                    <h4>Contactez-nous</h4>
+
+                    <p><i class="icon-phone"></i> Phone: (+216) 20 84 77 20</p>
+
+                    <p><i class="icon-envelope-alt"></i> Email: <a href="">contact@symfony-tunisia.com</a></p>
+                </div>
+            </div>
+            <div class="footer-border"></div>
+            <div class="row">
+                <div class="copyright span6">
+                    <p> Symfony is a trademark of Fabien Potencier. All rights reserved. <a href="http://symfony.com" target="_blank">symfony.com</a>
+                    </p>
+                </div>
+                <div class="social span6">
+                    <a target="_blank" class="sensio" href="//connect.sensiolabs.com/club/symfony-tunisia-community"></a>
+                    <a target="_blank" class="twitter" href="//twitter.com/SymfonyTunisia"></a>
+                    <a target="_blank" class="facebook" href="//www.facebook.com/Symfony.TN?ref=ts&fref=ts"></a>
+                    <a target="_blank" class="github" href="//github.com/SymfonyTunisia"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 {% endblock %}
