@@ -7,7 +7,7 @@ vagrantfile-local:
         memory: '512'
         chosen_provider: virtualbox
         network:
-            private_network: 192.168.56.107
+            private_network: 192.168.56.106
             forwarded_port: {}
         provider:
             virtualbox:
