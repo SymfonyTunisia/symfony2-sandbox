@@ -18,7 +18,7 @@ Inside the VM
 
 Edit your hosts file (/etc/hosts) and add :
 
-    192.168.56.107  symfony-sandbox.dev www.symfony-sandbox.dev
+    192.168.56.106  symfony-sandbox.dev www.symfony-sandbox.dev
 
 You can now access project page at
 
@@ -28,4 +28,4 @@ You can now access project page at
 
 [http://www.symfony-sandbox.dev:1080/](http://www.symfony-sandbox.dev:1080/) (mailcatcher)
 
-Admin Mysql : [adminer](http://192.168.56.107/adminer/)
+Admin Mysql : [adminer](http://192.168.56.106/adminer/)
